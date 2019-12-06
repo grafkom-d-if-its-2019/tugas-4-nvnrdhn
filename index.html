@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Belajar WebGL</title>
+</head>
+<body>
+  <div style="float: left;padding-right: 100px;">
+    <canvas id="glcanvas" width="900" height="900">
+      Browser Anda tidak mendukung HTML5 <code>&lt;canvas&gt;</code>.
+    </canvas>
+  </div>
+  <div >
+    <h1>Novan Ardhana (05111740000086)</h1>
+    <h2>Tugas 4 - Grafkom D</h2>
+    <h3>Instruksi:</h3>
+    <ul>
+      <li>Gunakan mouse untuk memutar kubus.</li>
+    </ul>
+  </div>
+  <script name="shader" data-src="vertex.vert.glsl" data-type="vertex" data-version="v1"></script>
+  <script name="shader" data-src="fragment.frag.glsl" data-type="fragment" data-version="v1"></script>
+  <script type="text/javascript" src="libs/gl-matrix-min.js"></script>
+  <script type="text/javascript" src="libs/signals.js"></script>
+  <script type="text/javascript" src="libs/glUtils.js"></script>
+  <script type="text/javascript" src="index.js"></script>  
+</body>
+</html>
