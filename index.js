@@ -54,33 +54,30 @@
       [-0.3, 0.1, -0.10], //19
     ]
 
-    var cyan = [0.0, 1.0, 1.0],
-        dark = [0.0, 0.5, 0.5]
-
     var nTriangles = []
 
-    nTriangles.push(...nPoints[0], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[1], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[2], ...[0.0, 0.0, 0.0, 0.0, 0.0]) 
-    nTriangles.push(...nPoints[0], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[2], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[9], ...[0.0, 0.0, 0.0, 0.0, 0.0])
-    nTriangles.push(...nPoints[2], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[3], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[8], ...[0.0, 0.0, 0.0, 0.0, 0.0])
-    nTriangles.push(...nPoints[3], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[7], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[8], ...[0.0, 0.0, 0.0, 0.0, 0.0])
-    nTriangles.push(...nPoints[4], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[5], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[7], ...[0.0, 0.0, 0.0, 0.0, 0.0])
-    nTriangles.push(...nPoints[5], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[6], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[7], ...[0.0, 0.0, 0.0, 0.0, 0.0])
+    nTriangles.push(...nPoints[0], ...[0.0, 0.0, 0.0], ...nPoints[1], ...[0.0, 0.0, 0.0], ...nPoints[2], ...[0.0, 0.0, 0.0]) 
+    nTriangles.push(...nPoints[0], ...[0.0, 0.0, 0.0], ...nPoints[2], ...[0.0, 0.0, 0.0], ...nPoints[9], ...[0.0, 0.0, 0.0])
+    nTriangles.push(...nPoints[2], ...[0.0, 0.0, 0.0], ...nPoints[3], ...[0.0, 0.0, 0.0], ...nPoints[8], ...[0.0, 0.0, 0.0])
+    nTriangles.push(...nPoints[3], ...[0.0, 0.0, 0.0], ...nPoints[7], ...[0.0, 0.0, 0.0], ...nPoints[8], ...[0.0, 0.0, 0.0])
+    nTriangles.push(...nPoints[4], ...[0.0, 0.0, 0.0], ...nPoints[5], ...[0.0, 0.0, 0.0], ...nPoints[7], ...[0.0, 0.0, 0.0])
+    nTriangles.push(...nPoints[5], ...[0.0, 0.0, 0.0], ...nPoints[6], ...[0.0, 0.0, 0.0], ...nPoints[7], ...[0.0, 0.0, 0.0])
 
-    nTriangles.push(...nPoints[0+10], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[1+10], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[2+10], ...[0.0, 0.0, 0.0, 0.0, 0.0]) 
-    nTriangles.push(...nPoints[0+10], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[2+10], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[9+10], ...[0.0, 0.0, 0.0, 0.0, 0.0])
-    nTriangles.push(...nPoints[2+10], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[3+10], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[8+10], ...[0.0, 0.0, 0.0, 0.0, 0.0])
-    nTriangles.push(...nPoints[3+10], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[7+10], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[8+10], ...[0.0, 0.0, 0.0, 0.0, 0.0])
-    nTriangles.push(...nPoints[4+10], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[5+10], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[7+10], ...[0.0, 0.0, 0.0, 0.0, 0.0])
-    nTriangles.push(...nPoints[5+10], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[6+10], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[7+10], ...[0.0, 0.0, 0.0, 0.0, 0.0])
+    nTriangles.push(...nPoints[0+10], ...[0.0, 0.0, 0.0], ...nPoints[1+10], ...[0.0, 0.0, 0.0], ...nPoints[2+10], ...[0.0, 0.0, 0.0]) 
+    nTriangles.push(...nPoints[0+10], ...[0.0, 0.0, 0.0], ...nPoints[2+10], ...[0.0, 0.0, 0.0], ...nPoints[9+10], ...[0.0, 0.0, 0.0])
+    nTriangles.push(...nPoints[2+10], ...[0.0, 0.0, 0.0], ...nPoints[3+10], ...[0.0, 0.0, 0.0], ...nPoints[8+10], ...[0.0, 0.0, 0.0])
+    nTriangles.push(...nPoints[3+10], ...[0.0, 0.0, 0.0], ...nPoints[7+10], ...[0.0, 0.0, 0.0], ...nPoints[8+10], ...[0.0, 0.0, 0.0])
+    nTriangles.push(...nPoints[4+10], ...[0.0, 0.0, 0.0], ...nPoints[5+10], ...[0.0, 0.0, 0.0], ...nPoints[7+10], ...[0.0, 0.0, 0.0])
+    nTriangles.push(...nPoints[5+10], ...[0.0, 0.0, 0.0], ...nPoints[6+10], ...[0.0, 0.0, 0.0], ...nPoints[7+10], ...[0.0, 0.0, 0.0])
     
     for (let i = 0; i < 10; i++) {
       if (i == 9) {
-        nTriangles.push(...nPoints[i], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[i+10], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[0], ...[0.0, 0.0, 0.0, 0.0, 0.0])
-        nTriangles.push(...nPoints[i+10], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[10], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[0], ...[0.0, 0.0, 0.0, 0.0, 0.0])
+        nTriangles.push(...nPoints[i], ...[0.0, 0.0, 0.0], ...nPoints[i+10], ...[0.0, 0.0, 0.0], ...nPoints[0], ...[0.0, 0.0, 0.0])
+        nTriangles.push(...nPoints[i+10], ...[0.0, 0.0, 0.0], ...nPoints[10], ...[0.0, 0.0, 0.0], ...nPoints[0], ...[0.0, 0.0, 0.0])
       }
       else {
-        nTriangles.push(...nPoints[i], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[i+10], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[i+1], ...[0.0, 0.0, 0.0, 0.0, 0.0])
-        nTriangles.push(...nPoints[i+10], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[i+11], ...[0.0, 0.0, 0.0, 0.0, 0.0], ...nPoints[i+1], ...[0.0, 0.0, 0.0, 0.0, 0.0])
+        nTriangles.push(...nPoints[i], ...[0.0, 0.0, 0.0], ...nPoints[i+10], ...[0.0, 0.0, 0.0], ...nPoints[i+1], ...[0.0, 0.0, 0.0])
+        nTriangles.push(...nPoints[i+10], ...[0.0, 0.0, 0.0], ...nPoints[i+11], ...[0.0, 0.0, 0.0], ...nPoints[i+1], ...[0.0, 0.0, 0.0])
       }
     }
 
@@ -95,30 +92,8 @@
         for (var j=0; j < 3; j++) {
           vertices.push(cubeNormals[a-1][j])
         }
-        switch (indices[i]) {
-          case a:
-            vertices.push(0.0)
-            vertices.push(0.0)
-            break
-          case b:
-            vertices.push(0.0)
-            vertices.push(1.0)
-            break
-          case c:
-            vertices.push(1.0)
-            vertices.push(1.0)
-            break
-          case d:
-            vertices.push(1.0)
-            vertices.push(0.0)
-            break
-        
-          default:
-            break
-        }
       }
     }
-    // quad(1, 0, 3, 2)
     quad(2, 3, 7, 6)
     quad(3, 0, 4, 7)
     quad(4, 5, 6, 7)
@@ -127,19 +102,35 @@
 
     vertices.push(...nTriangles)
 
-    var vertexBufferObject = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER, vertexBufferObject)
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW)
+    var texCoord = []
 
+    for (var i=0;i<5;i++) {
+      var x = Math.floor(i/2)/4
+      var y = (i%2)/2
+      texCoord.push(
+        x       , y       ,
+        x       , y + 0.5 ,
+        x + 0.25, y + 0.5 ,
+        x       , y       ,
+        x + 0.25, y + 0.5 ,
+        x + 0.25, y       ,
+      )
+    }
+
+    for (var i=0;i<nTriangles.length/6;i++)
+      texCoord.push(0, 0)
+
+    var vertexBufferObject = gl.createBuffer()
     var vPosition = gl.getAttribLocation(program, "vPosition")
     var vNormal = gl.getAttribLocation(program, "vNormal")
-    var vTexCoord = gl.getAttribLocation(program, "vTexCoord")
+    gl.bindBuffer(gl.ARRAY_BUFFER, vertexBufferObject)
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW)
     gl.vertexAttribPointer(
       vPosition,                          //variabel posisi attrib di shader
       3,                                  //jumlah elemen per attrib
       gl.FLOAT,                           //tipe data attrib
       gl.FALSE,                           
-      8 * Float32Array.BYTES_PER_ELEMENT, //ukuran byte tiap verteks (overall)
+      6 * Float32Array.BYTES_PER_ELEMENT, //ukuran byte tiap verteks (overall)
       0                                   //offset posisi elemen
     )
     gl.vertexAttribPointer(
@@ -147,19 +138,23 @@
       3, 
       gl.FLOAT, 
       gl.FALSE, 
-      8 * Float32Array.BYTES_PER_ELEMENT, 
+      6 * Float32Array.BYTES_PER_ELEMENT, 
       3 * Float32Array.BYTES_PER_ELEMENT
     )
+    gl.enableVertexAttribArray(vPosition)
+    gl.enableVertexAttribArray(vNormal)
+    var textureBufferObject = gl.createBuffer()
+    var vTexCoord = gl.getAttribLocation(program, "vTexCoord")
+    gl.bindBuffer(gl.ARRAY_BUFFER, textureBufferObject)
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(texCoord), gl.STATIC_DRAW)
     gl.vertexAttribPointer(
       vTexCoord, 
       2, 
       gl.FLOAT, 
       gl.FALSE, 
-      8 * Float32Array.BYTES_PER_ELEMENT, 
-      6 * Float32Array.BYTES_PER_ELEMENT
+      0,
+      0
     )
-    gl.enableVertexAttribArray(vPosition)
-    gl.enableVertexAttribArray(vNormal)
     gl.enableVertexAttribArray(vTexCoord)
     var speed = 0.005, camZ = 0.0, rotator = 0.0
     var axis = [false, false, false], x = 0, y = 1, z = 2
@@ -216,7 +211,7 @@
       new Uint8Array([0, 0, 255, 255]))
 
     var image = new Image()
-    image.src = "images/1.jpg"
+    image.src = "images/selfieboi.jpg"
     image.addEventListener('load', function() {
       loaded = true
     })
@@ -368,7 +363,7 @@
       gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE,
         new Uint8Array([0, 255, 255, 255]))
 
-      gl.drawArrays(gl.TRIANGLES, 30, nTriangles.length/8)
+      gl.drawArrays(gl.TRIANGLES, 30, nTriangles.length/6)
 
       let indices = [
         0, 1, 2, 3, 5, 6, 7, 8,
