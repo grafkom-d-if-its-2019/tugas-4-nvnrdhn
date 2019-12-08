@@ -1,6 +1,4 @@
 (function() {
-  // console.log("test");
-  
   glUtils.SL.init({ callback: function() { main(); }});
   function main() {
     var canvas = document.getElementById("glcanvas");
@@ -56,19 +54,14 @@
 
     var nTriangles = []
 
-    nTriangles.push(...nPoints[0], ...[0.0, 0.0, 0.0], ...nPoints[1], ...[0.0, 0.0, 0.0], ...nPoints[2], ...[0.0, 0.0, 0.0]) 
-    nTriangles.push(...nPoints[0], ...[0.0, 0.0, 0.0], ...nPoints[2], ...[0.0, 0.0, 0.0], ...nPoints[9], ...[0.0, 0.0, 0.0])
-    nTriangles.push(...nPoints[2], ...[0.0, 0.0, 0.0], ...nPoints[3], ...[0.0, 0.0, 0.0], ...nPoints[8], ...[0.0, 0.0, 0.0])
-    nTriangles.push(...nPoints[3], ...[0.0, 0.0, 0.0], ...nPoints[7], ...[0.0, 0.0, 0.0], ...nPoints[8], ...[0.0, 0.0, 0.0])
-    nTriangles.push(...nPoints[4], ...[0.0, 0.0, 0.0], ...nPoints[5], ...[0.0, 0.0, 0.0], ...nPoints[7], ...[0.0, 0.0, 0.0])
-    nTriangles.push(...nPoints[5], ...[0.0, 0.0, 0.0], ...nPoints[6], ...[0.0, 0.0, 0.0], ...nPoints[7], ...[0.0, 0.0, 0.0])
-
-    nTriangles.push(...nPoints[0+10], ...[0.0, 0.0, 0.0], ...nPoints[1+10], ...[0.0, 0.0, 0.0], ...nPoints[2+10], ...[0.0, 0.0, 0.0]) 
-    nTriangles.push(...nPoints[0+10], ...[0.0, 0.0, 0.0], ...nPoints[2+10], ...[0.0, 0.0, 0.0], ...nPoints[9+10], ...[0.0, 0.0, 0.0])
-    nTriangles.push(...nPoints[2+10], ...[0.0, 0.0, 0.0], ...nPoints[3+10], ...[0.0, 0.0, 0.0], ...nPoints[8+10], ...[0.0, 0.0, 0.0])
-    nTriangles.push(...nPoints[3+10], ...[0.0, 0.0, 0.0], ...nPoints[7+10], ...[0.0, 0.0, 0.0], ...nPoints[8+10], ...[0.0, 0.0, 0.0])
-    nTriangles.push(...nPoints[4+10], ...[0.0, 0.0, 0.0], ...nPoints[5+10], ...[0.0, 0.0, 0.0], ...nPoints[7+10], ...[0.0, 0.0, 0.0])
-    nTriangles.push(...nPoints[5+10], ...[0.0, 0.0, 0.0], ...nPoints[6+10], ...[0.0, 0.0, 0.0], ...nPoints[7+10], ...[0.0, 0.0, 0.0])
+    for (let i=0;i<11;i+=10) {
+      nTriangles.push(...nPoints[i+0], ...[0.0, 0.0, 0.0], ...nPoints[i+1], ...[0.0, 0.0, 0.0], ...nPoints[i+2], ...[0.0, 0.0, 0.0]) 
+      nTriangles.push(...nPoints[i+0], ...[0.0, 0.0, 0.0], ...nPoints[i+2], ...[0.0, 0.0, 0.0], ...nPoints[i+9], ...[0.0, 0.0, 0.0])
+      nTriangles.push(...nPoints[i+2], ...[0.0, 0.0, 0.0], ...nPoints[i+3], ...[0.0, 0.0, 0.0], ...nPoints[i+8], ...[0.0, 0.0, 0.0])
+      nTriangles.push(...nPoints[i+3], ...[0.0, 0.0, 0.0], ...nPoints[i+7], ...[0.0, 0.0, 0.0], ...nPoints[i+8], ...[0.0, 0.0, 0.0])
+      nTriangles.push(...nPoints[i+4], ...[0.0, 0.0, 0.0], ...nPoints[i+5], ...[0.0, 0.0, 0.0], ...nPoints[i+7], ...[0.0, 0.0, 0.0])
+      nTriangles.push(...nPoints[i+5], ...[0.0, 0.0, 0.0], ...nPoints[i+6], ...[0.0, 0.0, 0.0], ...nPoints[i+7], ...[0.0, 0.0, 0.0])
+    }
     
     for (let i = 0; i < 10; i++) {
       if (i == 9) {
@@ -191,7 +184,7 @@
         nm = glMatrix.mat3.create(),
         temp = glMatrix.mat4.create(),
         dc = glMatrix.vec3.fromValues(1.0, 1.0, 1.0),  // rgb
-        dd = glMatrix.vec3.fromValues(0., 0., 0.),  // xyz
+        dd = glMatrix.vec3.fromValues(0, 0, 0),  // xyz
         ac = glMatrix.vec3.fromValues(0.17, 0.00, 0.86)
 
     glMatrix.mat4.translate(mm, mm, [0.0, 0.0, -1.5])
