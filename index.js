@@ -232,11 +232,14 @@
       var x = event.clientX
       var y = event.clientY
       if (dragging) {
-        factor = 10 / canvas.height
-        var dx = factor * (x - lastx)
-        var dy = factor * (y - lasty)
-        glMatrix.mat4.rotateY(mm, mm, dx)
-        glMatrix.mat4.rotateX(mm, mm, dy)
+        var dx = glMatrix.glMatrix.toRadian(x - lastx)
+        var dy = glMatrix.glMatrix.toRadian(y - lasty)
+        var quat = glMatrix.quat.create()
+        glMatrix.quat.rotateX(quat, quat, dy)
+        glMatrix.quat.rotateY(quat, quat, dx)
+        var rotateMat = glMatrix.mat4.create()
+        glMatrix.mat4.fromQuat(rotateMat, quat)
+        glMatrix.mat4.multiply(mm, mm, rotateMat)
       }
       lastx = x
       lasty = y
